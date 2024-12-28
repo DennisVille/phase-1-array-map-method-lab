@@ -13,8 +13,11 @@ const tutorials = [
 
 const titleCased = function() {
   function callback(el,index){
+    //convert the passed element into an array of words  
     let elArray = el.split(" ");
+    //iterate over the array capitalizing each first letter
     let elArrayCapitalized = elArray.map((el1) => el1[0].toUpperCase()+el1.substring(1));
+    //convert the array back to a string
     let tutorialsCapitalized = elArrayCapitalized.join(" ");
     return tutorialsCapitalized;
   }
